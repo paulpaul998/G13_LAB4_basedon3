@@ -54,3 +54,4 @@ lab4_madefrom3\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.
 lab4_madefrom3\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 lab4_madefrom3\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 lab4_madefrom3\main.o: ../Inc/usb_host.h
+lab4_madefrom3\main.o: C:\Core\ARM\ARMCC\Bin\..\include\math.h
