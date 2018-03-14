@@ -1148,8 +1148,6 @@ void set_highPeriods(int current_period){
 	}
 	
 	
-	
-	
 	if(diff*diff < 0.04){
 		correctPeriod = 20;
 	}
@@ -1199,6 +1197,32 @@ void Start_display(void const * argument)
   /* Infinite loop */
   for(;;)
   {
+		
+		dispNum = padEntries[0] + ((float)padEntries[1]/10);
+		
+		switch (state){
+			
+			case WKEY1:
+					display (-1, dispNum);
+			break;
+			
+			case WKEY2:
+				display (-1, dispNum);
+			break;
+			
+			case WENTER:
+				display (-1, dispNum);
+			break;
+			
+			case DISPLAY:
+				display (0, mathResults [0]);
+			break;
+		
+			case SLEEP :
+				
+			break;
+		}
+		
     osDelay(1);
   }
   /* USER CODE END Start_display */
@@ -1221,8 +1245,107 @@ void Start_state_control(void const * argument)
 {
   /* USER CODE BEGIN Start_state_control */
   /* Infinite loop */
+	
   for(;;)
   {
+		
+		switch (state){
+			
+			case WKEY1 :
+				if (padVal >= 0 && padVal < 10 && padFlag == 0){
+					padEntries[0]=padVal;
+					padFlag = 1;
+				}
+				else if (padVal == -1 && padFlag == 1){
+					padFlag = 0;
+					state = WKEY2;
+				}
+			break;
+			
+			case WKEY2 :
+				if (padVal >= 0 && padVal < 10 && padFlag == 0){
+					padEntries[1]=padVal;
+					padFlag = 1;
+				}
+				else if (padVal == 10 && padFlag == 0){
+					padEntries[0] = 0;
+					padFlag = -1;
+				}
+				else if (padVal == -1){
+					if (padFlag == 1){
+						padFlag = 0;
+						state = WENTER;
+					}
+					else if (padFlag == -1){
+						padFlag = 0;
+						state = WKEY1;
+					}
+				}
+			break;
+			
+			case WENTER :
+				if (padVal == 11 && padFlag == 0){
+					padFlag = 1;
+				}
+				else if (padVal == 10 && padFlag == 0){
+					padEntries[1] = 0;
+					padFlag = -1;
+				}
+				else if (padVal == -1){
+					if (padFlag == 1){
+						padFlag = 0;
+						
+						
+						state = DISPLAY;
+					}
+					else if (padFlag == -1){
+						padFlag = 0;
+						state = WKEY2;
+					}
+				}
+			break;
+			
+			case DISPLAY :
+				if (padVal == 11 && padFlag == 0){
+					padFlag = 1;
+				}
+				else if (padVal == -1){
+					if (padFlag == 1){
+						padFlag = 0;
+						padEntries[0] = 0;
+						padEntries [1] = 0;
+						state = WKEY1;
+					}
+				}
+				
+				C_math (&data[0], &mathResults [0], sampleNB);                //perform math operation on data to get RMS, min and max values
+				
+				if (correctCounter > correctPeriod){
+					correctCounter = 0;
+					set_highPeriods(highPeriods);
+				}
+				htim3.Instance->CCR1 = highPeriods;									// sets the number of periods that the pwm wave is set to high
+				
+			break;
+			
+			case SLEEP :
+				if (padVal == 11 && padFlag == 0){
+					padFlag = 1;
+				}
+				else if (padVal == -1){
+					if (padFlag == 1){
+						padFlag = 0;
+						padEntries[0] = 0;     //reset pad entries
+						padEntries[1] = 0;
+						state = WKEY1;
+					}
+				}
+			break;
+			
+		}
+		
+		
+		
     osDelay(1);
   }
   /* USER CODE END Start_state_control */
@@ -1235,6 +1358,9 @@ void Start_pad_read(void const * argument)
   /* Infinite loop */
   for(;;)
   {
+		
+		padVal = readPad();
+		
     osDelay(1);
   }
   /* USER CODE END Start_pad_read */

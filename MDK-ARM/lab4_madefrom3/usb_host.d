@@ -3,7 +3,7 @@ lab4_madefrom3\usb_host.o: ../Inc/usb_host.h
 lab4_madefrom3\usb_host.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 lab4_madefrom3\usb_host.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
 lab4_madefrom3\usb_host.o: ../Drivers/CMSIS/Include/core_cm4.h
-lab4_madefrom3\usb_host.o: C:\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lab4_madefrom3\usb_host.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lab4_madefrom3\usb_host.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 lab4_madefrom3\usb_host.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 lab4_madefrom3\usb_host.o: ../Drivers/CMSIS/Include/core_cmFunc.h
@@ -16,7 +16,7 @@ lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc
 lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
 lab4_madefrom3\usb_host.o: ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
 lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-lab4_madefrom3\usb_host.o: C:\Core\ARM\ARMCC\Bin\..\include\stdio.h
+lab4_madefrom3\usb_host.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
 lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
 lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
@@ -41,11 +41,11 @@ lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd
 lab4_madefrom3\usb_host.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 lab4_madefrom3\usb_host.o: ../Middlewares/ST/STM32_USB_Host_Library/Core/Inc/usbh_core.h
 lab4_madefrom3\usb_host.o: ../Inc/usbh_conf.h
-lab4_madefrom3\usb_host.o: C:\Core\ARM\ARMCC\Bin\..\include\stdlib.h
-lab4_madefrom3\usb_host.o: C:\Core\ARM\ARMCC\Bin\..\include\string.h
+lab4_madefrom3\usb_host.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lab4_madefrom3\usb_host.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 lab4_madefrom3\usb_host.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 lab4_madefrom3\usb_host.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lab4_madefrom3\usb_host.o: C:\Core\ARM\ARMCC\Bin\..\include\stddef.h
+lab4_madefrom3\usb_host.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 lab4_madefrom3\usb_host.o: ../Inc/FreeRTOSConfig.h
 lab4_madefrom3\usb_host.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 lab4_madefrom3\usb_host.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

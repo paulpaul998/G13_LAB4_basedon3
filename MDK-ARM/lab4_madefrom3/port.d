@@ -1,7 +1,7 @@
 lab4_madefrom3\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/port.c
 lab4_madefrom3\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lab4_madefrom3\port.o: C:\Core\ARM\ARMCC\Bin\..\include\stddef.h
-lab4_madefrom3\port.o: C:\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lab4_madefrom3\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lab4_madefrom3\port.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lab4_madefrom3\port.o: ../Inc/FreeRTOSConfig.h
 lab4_madefrom3\port.o: ../Inc/main.h
 lab4_madefrom3\port.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

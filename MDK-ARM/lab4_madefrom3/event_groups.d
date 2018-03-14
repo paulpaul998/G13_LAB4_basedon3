@@ -1,8 +1,8 @@
 lab4_madefrom3\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
-lab4_madefrom3\event_groups.o: C:\Core\ARM\ARMCC\Bin\..\include\stdlib.h
+lab4_madefrom3\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lab4_madefrom3\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lab4_madefrom3\event_groups.o: C:\Core\ARM\ARMCC\Bin\..\include\stddef.h
-lab4_madefrom3\event_groups.o: C:\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lab4_madefrom3\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lab4_madefrom3\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lab4_madefrom3\event_groups.o: ../Inc/FreeRTOSConfig.h
 lab4_madefrom3\event_groups.o: ../Inc/main.h
 lab4_madefrom3\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

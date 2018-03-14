@@ -1,9 +1,9 @@
 lab4_madefrom3\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
-lab4_madefrom3\queue.o: C:\Core\ARM\ARMCC\Bin\..\include\stdlib.h
-lab4_madefrom3\queue.o: C:\Core\ARM\ARMCC\Bin\..\include\string.h
+lab4_madefrom3\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+lab4_madefrom3\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 lab4_madefrom3\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lab4_madefrom3\queue.o: C:\Core\ARM\ARMCC\Bin\..\include\stddef.h
-lab4_madefrom3\queue.o: C:\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lab4_madefrom3\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lab4_madefrom3\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lab4_madefrom3\queue.o: ../Inc/FreeRTOSConfig.h
 lab4_madefrom3\queue.o: ../Inc/main.h
 lab4_madefrom3\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

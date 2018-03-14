@@ -1,8 +1,8 @@
 lab4_madefrom3\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
-lab4_madefrom3\list.o: C:\Core\ARM\ARMCC\Bin\..\include\stdlib.h
+lab4_madefrom3\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 lab4_madefrom3\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lab4_madefrom3\list.o: C:\Core\ARM\ARMCC\Bin\..\include\stddef.h
-lab4_madefrom3\list.o: C:\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lab4_madefrom3\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lab4_madefrom3\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lab4_madefrom3\list.o: ../Inc/FreeRTOSConfig.h
 lab4_madefrom3\list.o: ../Inc/main.h
 lab4_madefrom3\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

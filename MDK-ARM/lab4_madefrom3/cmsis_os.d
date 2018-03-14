@@ -1,9 +1,9 @@
 lab4_madefrom3\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
-lab4_madefrom3\cmsis_os.o: C:\Core\ARM\ARMCC\Bin\..\include\string.h
+lab4_madefrom3\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 lab4_madefrom3\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 lab4_madefrom3\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lab4_madefrom3\cmsis_os.o: C:\Core\ARM\ARMCC\Bin\..\include\stddef.h
-lab4_madefrom3\cmsis_os.o: C:\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lab4_madefrom3\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lab4_madefrom3\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lab4_madefrom3\cmsis_os.o: ../Inc/FreeRTOSConfig.h
 lab4_madefrom3\cmsis_os.o: ../Inc/main.h
 lab4_madefrom3\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h

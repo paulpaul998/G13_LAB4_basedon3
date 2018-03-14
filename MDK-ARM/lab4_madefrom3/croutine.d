@@ -1,7 +1,7 @@
 lab4_madefrom3\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
 lab4_madefrom3\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
-lab4_madefrom3\croutine.o: C:\Core\ARM\ARMCC\Bin\..\include\stddef.h
-lab4_madefrom3\croutine.o: C:\Core\ARM\ARMCC\Bin\..\include\stdint.h
+lab4_madefrom3\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+lab4_madefrom3\croutine.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 lab4_madefrom3\croutine.o: ../Inc/FreeRTOSConfig.h
 lab4_madefrom3\croutine.o: ../Inc/main.h
 lab4_madefrom3\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
