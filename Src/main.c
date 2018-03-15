@@ -626,7 +626,7 @@ static void MX_GPIO_Init(void)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
 		adc_val = HAL_ADC_GetValue(&hadc1);
-		float test = (float)(adc_val*3.0);           // if 12 bit resolution we need to divide by 2^12 !! 
+		float test = (float)(adc_val);           // if 12 bit resolution we need to divide by 2^12 !! 
 		FIR_C(test, &filtered_adc);                  //filter ADC value
 		data [sample] = filtered_adc;                //store filtered data in array
 		sample ++;
@@ -1154,7 +1154,17 @@ void Start_ADC_calc(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+		
+		
+				C_math (&data[0], &mathResults [0], sampleNB);                //perform math operation on data to get RMS, min and max values
+				
+				set_highPeriods(highPeriods);
+				
+				htim3.Instance->CCR1 = highPeriods;									// sets the number of periods that the pwm wave is set to high
+		
+		
+		
+    osDelay(200);
   }
   /* USER CODE END Start_ADC_calc */
 }
@@ -1287,13 +1297,6 @@ void Start_state_control(void const * argument)
 					}
 				}
 				
-				C_math (&data[0], &mathResults [0], sampleNB);                //perform math operation on data to get RMS, min and max values
-				
-				//correctCounter = 0;
-				
-				set_highPeriods(highPeriods);
-				
-				htim3.Instance->CCR1 = highPeriods;									// sets the number of periods that the pwm wave is set to high
 				
 			break;
 			
@@ -1315,7 +1318,7 @@ void Start_state_control(void const * argument)
 		
 		
 		
-    osDelay(1);
+    osDelay(40);
   }
   /* USER CODE END Start_state_control */
 }
@@ -1330,7 +1333,7 @@ void Start_pad_read(void const * argument)
 		
 		padVal = readPad();
 		
-    osDelay(1);
+    osDelay(80);
   }
   /* USER CODE END Start_pad_read */
 }
