@@ -97,7 +97,7 @@ extern uint8_t systickFlag;
 
 float dispNum = 0;
 int padEntries [] = {0, 0, 0, 0};
-int padVal = 0;
+int padVal = -1;
 
 int padFlag = 0;
 int holdingFlag = 0;
@@ -323,7 +323,7 @@ static void MX_ADC1_Init(void)
     */
   hadc1.Instance = ADC1;
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
-  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
+  hadc1.Init.Resolution = ADC_RESOLUTION_10B;
   hadc1.Init.ScanConvMode = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
@@ -626,7 +626,7 @@ static void MX_GPIO_Init(void)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
 		adc_val = HAL_ADC_GetValue(&hadc1);
-		float test = (float)(adc_val*3.0/4096.0);    //12 bit resolution so we need to divide by 2^12 !!
+		float test = (float)(adc_val*3.0);           // if 12 bit resolution we need to divide by 2^12 !! 
 		FIR_C(test, &filtered_adc);                  //filter ADC value
 		data [sample] = filtered_adc;                //store filtered data in array
 		sample ++;
@@ -1049,8 +1049,6 @@ void updateEnt (int newEnt) {
 
 void set_highPeriods(int current_period){
 
-	float p_control = 1;
-	float proportionGain;
 	float rms = mathResults [0];
 	float diff = dispNum - rms;
 
@@ -1169,7 +1167,6 @@ void Start_display(void const * argument)
   for(;;)
   {
 		
-		dispNum = padEntries[0] + ((float)padEntries[1]/10);
 		
 		switch (state){
 			
@@ -1194,7 +1191,7 @@ void Start_display(void const * argument)
 			break;
 		}
 		
-    osDelay(1);
+    osDelay(10);
   }
   /* USER CODE END Start_display */
 }
@@ -1219,6 +1216,7 @@ void Start_state_control(void const * argument)
 	
   for(;;)
   {
+		dispNum = padEntries[0] + ((float)padEntries[1]/10);
 		
 		switch (state){
 			
@@ -1291,10 +1289,10 @@ void Start_state_control(void const * argument)
 				
 				C_math (&data[0], &mathResults [0], sampleNB);                //perform math operation on data to get RMS, min and max values
 				
-				if (correctCounter > correctPeriod){
-					correctCounter = 0;
-					set_highPeriods(highPeriods);
-				}
+				//correctCounter = 0;
+				
+				set_highPeriods(highPeriods);
+				
 				htim3.Instance->CCR1 = highPeriods;									// sets the number of periods that the pwm wave is set to high
 				
 			break;
