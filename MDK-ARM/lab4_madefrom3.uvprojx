@@ -568,36 +568,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Middlewares/USB_Host_Library</GroupName>
-          <Files>
-            <File>
-              <FileName>usbh_core.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_core.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_cdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src/usbh_cdc.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_ctlreq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ctlreq.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_pipes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_pipes.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_ioreq.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Middlewares/ST/STM32_USB_Host_Library/Core/Src/usbh_ioreq.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Application/User</GroupName>
           <Files>
             <File>
@@ -611,11 +581,6 @@
               <FilePath>../Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
             <File>
-              <FileName>usbh_conf.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usbh_conf.c</FilePath>
-            </File>
-            <File>
               <FileName>freertos.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/freertos.c</FilePath>
@@ -624,16 +589,6 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/main.c</FilePath>
-            </File>
-            <File>
-              <FileName>usbh_platform.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usbh_platform.c</FilePath>
-            </File>
-            <File>
-              <FileName>usb_host.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/usb_host.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -27,14 +27,7 @@ lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4x
 lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
-lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
-lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
-lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s.h
-lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2s_ex.h
 lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
-lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
 lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
-lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_hcd.h
-lab4_madefrom3\stm32f4xx_hal_dma.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h

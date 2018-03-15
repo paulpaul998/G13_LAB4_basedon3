@@ -33,18 +33,10 @@
 "lab4_madefrom3\croutine.o"
 "lab4_madefrom3\port.o"
 "lab4_madefrom3\system_stm32f4xx.o"
-"lab4_madefrom3\usbh_core.o"
-"lab4_madefrom3\usbh_cdc.o"
-"lab4_madefrom3\usbh_ctlreq.o"
-"lab4_madefrom3\usbh_pipes.o"
-"lab4_madefrom3\usbh_ioreq.o"
 "lab4_madefrom3\stm32f4xx_it.o"
 "lab4_madefrom3\stm32f4xx_hal_msp.o"
-"lab4_madefrom3\usbh_conf.o"
 "lab4_madefrom3\freertos.o"
 "lab4_madefrom3\main.o"
-"lab4_madefrom3\usbh_platform.o"
-"lab4_madefrom3\usb_host.o"
 --library_type=microlib --strict --scatter "lab4_madefrom3\lab4_madefrom3.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
