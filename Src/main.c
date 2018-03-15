@@ -323,7 +323,7 @@ static void MX_ADC1_Init(void)
     */
   hadc1.Instance = ADC1;
   hadc1.Init.ClockPrescaler = ADC_CLOCK_SYNC_PCLK_DIV4;
-  hadc1.Init.Resolution = ADC_RESOLUTION_10B;
+  hadc1.Init.Resolution = ADC_RESOLUTION_12B;
   hadc1.Init.ScanConvMode = DISABLE;
   hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
@@ -626,7 +626,7 @@ static void MX_GPIO_Init(void)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
 {
 		adc_val = HAL_ADC_GetValue(&hadc1);
-		float test = (float)(adc_val);           // if 12 bit resolution we need to divide by 2^12 !! 
+		float test = (float)(adc_val*3.0/4096.0);           // if 12 bit resolution we need to divide by 2^12 !! 
 		FIR_C(test, &filtered_adc);                  //filter ADC value
 		data [sample] = filtered_adc;                //store filtered data in array
 		sample ++;
