@@ -93,7 +93,6 @@ int adc_val;
 float filtered_adc;
 float mathResults [MATH_ARRAY_SIZE];
 extern uint8_t systickFlag;
-//extern uint8_t buttonFlag;
 
 float dispNum = 0;
 int padEntries [] = {0, 0, 0, 0};
@@ -102,6 +101,7 @@ int padVal = -1;
 int padFlag = 0;
 int holdingFlag = 0;
 int correctFlag = 0;
+int timer = 0;
 
 int holdCount = 0;
 int highPeriods = 100;
@@ -1142,7 +1142,22 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+		if (padVal == 10){
+			holdCount++;
+		}
+		else {
+			holdCount = 0;
+		}
+		if (holdCount >= 50){
+			displayNum (-1, -1);   //clear display
+			
+			HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);   //power consumption
+			HAL_ADC_Stop_IT(&hadc1);
+			
+			state = SLEEP;
+		}
+		
+    osDelay(50);
   }
   /* USER CODE END 5 */ 
 }
@@ -1274,7 +1289,6 @@ void Start_state_control(void const * argument)
 					if (padFlag == 1){
 						padFlag = 0;
 						
-						
 						state = DISPLAY;
 					}
 					else if (padFlag == -1){
@@ -1309,6 +1323,10 @@ void Start_state_control(void const * argument)
 						padFlag = 0;
 						padEntries[0] = 0;     //reset pad entries
 						padEntries[1] = 0;
+						
+						HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);  //Restart PWM
+						HAL_ADC_Start_IT(&hadc1);                  //Restart ADC
+						
 						state = WKEY1;
 					}
 				}
