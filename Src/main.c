@@ -1149,12 +1149,19 @@ void StartDefaultTask(void const * argument)
 			holdCount = 0;
 		}
 		if (holdCount >= 50){
-			displayNum (-1, -1);   //clear display
+			
+			state = SLEEP;
+			
+			
 			
 			HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);   //power consumption
 			HAL_ADC_Stop_IT(&hadc1);
 			
-			state = SLEEP;
+			
+			
+			osThreadTerminate(defaultTaskHandle); 
+			
+			
 		}
 		
     osDelay(50);
@@ -1212,7 +1219,7 @@ void Start_display(void const * argument)
 			break;
 		
 			case SLEEP :
-				
+				displayNum (-1, -1);   //clear display
 			break;
 		}
 		
@@ -1326,6 +1333,9 @@ void Start_state_control(void const * argument)
 						
 						HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);  //Restart PWM
 						HAL_ADC_Start_IT(&hadc1);                  //Restart ADC
+						
+						osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+						defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 						
 						state = WKEY1;
 					}
